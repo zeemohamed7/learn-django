@@ -120,7 +120,7 @@ Run the development server
 python manage.py runserver
 ```
 
-<detatils><summary>Project vs. App</summary>
+<details><summary>Project 🏠 vs. App 🛋️</summary>
 
 Project = the overall Django website (settings, URLs, config). It's the whole house 🏠 (with wiring, foundation, and rooms).
 
