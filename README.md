@@ -52,14 +52,14 @@ brew install python
 
 > When you install a new version of Python, sometimes your system still points python3 to the old one. This is because your PATH is still mapped to the older Python binary. Consult your instructor on this! 
 
-2. Install Pipenv
+### Install Pipenv
 Install it once on your system:
 
-# macOS
+### macOS
 ```bash
 brew install pipenv
 ```
-# or everywhere (with pip)
+#### or everywhere (with pip)
 ```bash
 pip install pipenv --user
 ```
@@ -68,15 +68,15 @@ If pipenv isn’t recognized after installing with pip, add it to your PATH:
 ```bash
 export PATH="$(python3 -m site --user-base)/bin:$PATH"
 ```
-3. Verify Installations
+
+Verify Installations
 Check that both work:
 ```bash
 python3 --version   # should show Python 3.x
 pipenv --version    # should show Pipenv x.x.x
 ```
 
-2. Installing Django with Pipenv
-
+### Installing Django with Pipenv
 Create a project folder
 ```bash
 mkdir my_django_project
@@ -102,7 +102,7 @@ Verify the installation:
 django-admin --version
 ```
 
-3. Django Project Basics
+### Django Project Basics
 
 Start a new project
 ```bash
