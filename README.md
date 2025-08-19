@@ -112,7 +112,7 @@ Now you’re ready to run Django commands inside your project!
 
 Start a new project
 ```bash
-django-admin startproject project_name
+django-admin startproject project_name 
 cd project_name
 ```
 
