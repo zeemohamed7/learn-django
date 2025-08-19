@@ -37,7 +37,7 @@ Key difference: PostgreSQL is relational (tables, rows, foreign keys), while Mon
 
 ### Create a Database for the Project
 
-Unlike MongoDB, which automatically creates a database the first time you use it, SQL databases require you to create the database manually before using it in a Django project.
+Unlike MongoDB, which automatically creates a database the first time you use it, SQL databases require you to create the database manually before using it in a Django project. You can either use psql shell, createdb, or pgAdmin.
 
 #### Using the psql Command Line
 Open the PostgreSQL shell:
@@ -49,6 +49,18 @@ Create a new database for your project:
 ```bash
 CREATE DATABASE catcollector_db;
 ```
+
+Exit using
+```bash
+\q
+```
+
+### Using createdb
+```bash
+createdb catcollector_db
+```
+
+This creates a new database named catcollector_db. You don’t need to open the psql shell first — it runs directly from your terminal.
 
 ### Using pgAdmin
 
