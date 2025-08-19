@@ -55,10 +55,11 @@ brew install python
 ### Install Pipenv
 Install it once on your system:
 
-### macOS
+#### macOS
 ```bash
 brew install pipenv
 ```
+
 #### or everywhere (with pip)
 ```bash
 pip install pipenv --user
@@ -69,8 +70,7 @@ If pipenv isn’t recognized after installing with pip, add it to your PATH:
 export PATH="$(python3 -m site --user-base)/bin:$PATH"
 ```
 
-Verify Installations
-Check that both work:
+Verify installations:
 ```bash
 python3 --version   # should show Python 3.x
 pipenv --version    # should show Pipenv x.x.x
@@ -89,21 +89,24 @@ pipenv install django
 ```
 Pipfile and Pipfile.lock should be created.
 
+
 Activate the virtual environment
 ```bash
 pipenv shell
 ```
-Being in the shell looks liek this:
+Being in the shell looks like this:
+
 <br>
 <img width="359" height="33" alt="image" src="https://github.com/user-attachments/assets/06cfeca9-0631-447f-a276-e94b5fdb52a8" />
 <br>
-
-Now you’re ready to run Django commands inside your project!
+<br>
 
 Verify the installation:
 ```bash
 django-admin --version
 ```
+
+Now you’re ready to run Django commands inside your project!
 
 ### Django Project Basics
 
@@ -136,18 +139,19 @@ A project can contain many apps, but every app lives inside a project.
 Visit http://127.0.0.1:8000/ in your browser to see your Django site.
 
 When you're done working on your project, you can deactivate the pipenv shell by typing:
+
 ```bash
 exit
 ```
 
 4. Notes & Tips
 
-Always use Pipenv for managing packages and environments.
+- Always use Pipenv for managing packages and environments.
 
-Keep track of your dependencies in the Pipfile.
+- Keep track of your dependencies in the Pipfile.
 
-You don’t need to activate the virtual environment to install packages with Pipenv (pipenv install package_name).
+- You don’t need to activate the virtual environment to install packages with Pipenv (pipenv install package_name).
 
-Activate the shell (pipenv shell) when running Django commands interactively.
+- Activate the shell (pipenv shell) when running Django commands interactively.
 
 > ⚠️ Note that if you run the `django-admin --version` command again, you'll receive a message that it's not installed. Packages only work within the environment they were installed in!
