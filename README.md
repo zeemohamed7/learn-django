@@ -94,7 +94,10 @@ Activate the virtual environment
 pipenv shell
 ```
 Being in the shell looks liek this:
+<br>
 <img width="359" height="33" alt="image" src="https://github.com/user-attachments/assets/06cfeca9-0631-447f-a276-e94b5fdb52a8" />
+<br>
+
 Now you’re ready to run Django commands inside your project!
 
 Verify the installation:
