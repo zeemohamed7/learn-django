@@ -144,7 +144,7 @@ When you're done working on your project, you can deactivate the pipenv shell by
 exit
 ```
 
-4. Notes & Tips
+### Notes & Tips
 
 - Always use Pipenv for managing packages and environments.
 
