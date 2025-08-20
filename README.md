@@ -6,11 +6,10 @@ Welcome! This repository contains beginner-friendly guides for setting up **Pyth
 
 ## Guides
 
-1. [Setup and Installation](setup_and_installation.md)  
-Step-by-step instructions for installing Python, Pipenv, and Django.
-
-2. [Starting a Django Project](starting_a_django_project.md)  
-Learn how to create a full-stack Django app using Django Template Language (DTL), including setting up PostgreSQL as your database.
+| #  | Guide                              | Description                                                                 |
+|----|------------------------------------|-----------------------------------------------------------------------------|
+| 1  | [Setup and Installation](setup_and_installation.md) | Step-by-step instructions for installing Python, Pipenv, and Django.        |
+| 2  | [Starting a Django Project](starting_a_django_project.md) | Learn how to create a full-stack Django app using Django Template Language (DTL), including setting up PostgreSQL as your database. |
 
 ---
 
