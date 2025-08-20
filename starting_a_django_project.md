@@ -25,6 +25,8 @@ pip3 install psycopg2-binary
 ```
 psycopg2 is a library that allows Python applications to interface with PostgreSQL.
 
+---
+
 ### Install pgAdmin (Optional GUI)
 
 *pgAdmin* is a graphical interface for managing PostgreSQL databases, similar to MongoDB Compass, which is the GUI for MongoDB.
