@@ -6,7 +6,7 @@ Welcome! This repository contains beginner-friendly guides for setting up **Pyth
 
 ## Guides
 
-1. [Django with Pipenv: A Beginner's Guide](django_with_pipenv.md)  
+1. [Setup and Installation](setup_and_installation.md)  
 Step-by-step instructions for installing Python, Pipenv, and Django.
 
 2. [Starting a Django Project](starting_a_django_project.md)  
