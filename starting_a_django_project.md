@@ -6,7 +6,7 @@ Learn how to create a full-stack Django app using Django Template Language (DTL)
 1. Setting up PostgreSQL (and pgAdmin4)
 2. Models, Views, and Templates
 3. Starting Your Project
-4. 
+4. Connecting to DB
 
 
 ## Setting up PostgreSQL
@@ -179,7 +179,25 @@ main_app/
 
 🚨 Create a `urls.py` file inside of `main_app` 🚨
 
-
-### Set up database
-
 Most important ones right now will be models.py, views.py and urls.py
+
+
+## Connecting to Database
+Earlier we created a dedicated catcollector PostgreSQL database.
+
+A Django project's configuration lives in `settings.py`. To set up our database, scroll down to:
+<br>
+
+<img width="379" height="111" alt="image" src="https://github.com/user-attachments/assets/4aa36748-f4e4-49ff-8739-ceae06db7420" />
+
+<br>
+
+<br>
+
+<img width="605" height="182" alt="image" src="https://github.com/user-attachments/assets/5623d7a9-9b6f-42e9-83aa-cb745dfc9a5e" />
+
+<br>
+
+🚨 Don't follow blindly! Actually input the proper details. 🚨
+
+
