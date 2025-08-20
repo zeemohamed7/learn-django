@@ -173,6 +173,6 @@ main_app/
 - `migrations/` → DB history changes
 - `tests.py` → automated tests
 
-‼ Note: We'll also be creating a `urls.py` file inside of `main_app`
+🚨 Create a `urls.py` file inside of `main_app` 🚨
 
 Most important ones right now will be models.py, views.py and urls.py
