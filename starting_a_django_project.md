@@ -7,7 +7,8 @@ Learn how to create a full-stack Django app using Django Template Language (DTL)
 2. Models, Views, and Templates
 3. Starting Your Project
 4. 
---- 
+
+
 ## Setting up PostgreSQL
 It is a powerful, open-source relational database system. We'll use it as the backend database for our Django project.
 
