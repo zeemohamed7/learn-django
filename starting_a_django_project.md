@@ -134,4 +134,11 @@ Let's take a look at `catcollector` project folder first.
 
 ---
 
-<pre> ```plaintext project_name/ ├── manage.py ├── project_name/ │ ├── __init__.py │ ├── asgi.py │ ├── settings.py │ ├── urls.py │ └── wsgi.py ``` </pre>
+project_name/
+├── manage.py
+├── project_name/
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
