@@ -133,7 +133,7 @@ This should be your structure so far:
 Let's take a look at `catcollector` project folder first.
 
 ---
-
+```tree
 project_name/
 ├── manage.py
 ├── project_name/
@@ -142,3 +142,4 @@ project_name/
 │   ├── settings.py
 │   ├── urls.py
 │   └── wsgi.py
+```
