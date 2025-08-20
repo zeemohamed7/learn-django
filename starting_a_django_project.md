@@ -99,11 +99,6 @@ django-admin startproject project_name
 cd project_name
 ```
 
-Start a new app
-```bash
-python manage.py startapp main_app
-```
-
 Run the development server
 ```bash
 python manage.py runserver
@@ -132,14 +127,52 @@ This should be your structure so far:
 
 Let's take a look at `catcollector` project folder first.
 
----
 ```tree
-project_name/
+catcollector/
 ├── manage.py
-├── project_name/
+├── catcollector/
 │   ├── __init__.py
 │   ├── asgi.py
 │   ├── settings.py
 │   ├── urls.py
 │   └── wsgi.py
 ```
+
+- `manage.py` → run commands
+- `__init__.py` → makes the folder a Python module
+- `settings.py` → project configuration
+- `urls.py` → URL routing
+- `wsgi.py` → production entry point (WSGI)
+- `asgi.py` → production entry point (ASGI, async support)
+
+Most important ones right now will be manage.py, settings.py and urls.py
+
+---
+Start a new app
+```bash
+python manage.py startapp main_app
+```
+
+You’ll see a new folder called `main_app` with this structure:
+```tree
+main_app/
+├── __init__.py
+├── admin.py
+├── apps.py
+├── migrations/
+│   └── __init__.py
+├── models.py
+├── tests.py
+└── views.py
+```
+
+- `models.py` → database tables
+- `views.py` → logic for requests/responses
+- `admin.py` → connect models to Django Admin
+- `apps.py` → app config
+- `migrations/` → DB history changes
+- `tests.py` → automated tests
+
+‼ Note: We'll also be creating a `urls.py` file inside of `main_app`
+
+Most important ones right now will be models.py, views.py and urls.py
