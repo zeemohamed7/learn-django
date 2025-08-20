@@ -1,7 +1,6 @@
-# Django: A Beginner's Guide
+# Setup and Installation
 
-This guide will help you set up Python and Django, a powerful Python web framework, using Pipenv for managing packages and virtual environments.
-In this tutorial, I will walk you through the process of setting upDjango, a powerful Python web framework, using Pipenv for managing packages and virtual environments.
+In this tutorial, I will walk you through the process of setting up Django, a powerful Python web framework, using Pipenv for managing packages and virtual environments and PostgreSQL
 
 
 > ⚠️ Note: This is mostly based on macOS, so commands might vary. I am also using pipenv to automatically create virtual environments instead of installing packages system-wide to avoid breaking anything.
