@@ -10,7 +10,7 @@ In this tutorial, I will walk you through the process of setting upDjango, a pow
 - [Key Tools](#key-tools)
 - [Setting up](#setting-up)
 - [Installing Django with Pipenv](#installing-django-with-pipenv)
-- [Django Project Basics](#django-project-basics)
+- [Setting up PostgreSQL (and pgAdmin4)](#setting-up-postgresql)
 - [Notes & Tips](#notes--tips)  
 
 ## Key Tools
@@ -30,7 +30,7 @@ In this tutorial, I will walk you through the process of setting upDjango, a pow
 - Pipfile.lock – locks exact versions for reproducibility
 
 > Remember seeing something similar in wih Node.js?
-
+---
 ## Setting up
 
 ### Install Python 3
@@ -108,42 +108,76 @@ django-admin --version
 
 Now you’re ready to run Django commands inside your project!
 
-### Django Project Basics
+---
+## Setting up PostgreSQL
+It is a powerful, open-source relational database system. We'll use it as the backend database for our Django project.
 
-Start a new project
+### Install PostgreSQL
+- macOS (with Homebrew):
 ```bash
-django-admin startproject project_name 
-cd project_name
+brew install postgresql
+brew services start postgresql
+```
+Windows: Download the installer from [postgresql.org](https://www.postgresql.org/download/windows/) and follow the instructions.
+
+To use PostgreSQL, we need to do a **one-time install** of the psycopg2 Python package:
+```bash
+pip3 install psycopg2-binary
+```
+psycopg2 is a library that allows Python applications to interface with PostgreSQL.
+
+### Install pgAdmin (Optional GUI)
+
+pgAdmin is a graphical interface for managing PostgreSQL databases.
+
+You can create databases, users, and run SQL queries without using the command line.
+
+It’s similar to MongoDB Compass, which is the GUI for MongoDB.
+
+Key difference: PostgreSQL is relational (tables, rows, foreign keys), while MongoDB is NoSQL (documents, collections, JSON-like structure).
+
+### Install psycopg2
+To use PostgreSQL, we need to do a one-time install of the psycopg2 Python package:
+```bash
+pipenv install psycopg2-binary
+```
+psycopg2 is a popular library that enables Python applications to interface with PostgreSQL.
+
+### Create a Database for the Project
+
+Unlike MongoDB, which automatically creates a database the first time you use it, SQL databases require you to create the database manually before using it in a Django project. You can either use psql shell, createdb, or pgAdmin.
+
+#### Using the psql Command Line
+Open the PostgreSQL shell:
+```bash
+psql
 ```
 
-Start a new app
+Create a new database for your project:
 ```bash
-python manage.py startapp app_name
+CREATE DATABASE catcollector_db;
 ```
 
-Run the development server
+Exit using
 ```bash
-python manage.py runserver
+\q
 ```
 
-<details><summary>Project 🏠 vs. App 🛋️</summary>
-
-Project = the overall Django website (settings, URLs, config). It's the whole house 🏠 (with wiring, foundation, and rooms).
-
-App = a modular feature inside the project. each room 🛋️ (kitchen, bedroom, bathroom). Each has a purpose but they all belong to the house.
-
-A project can contain many apps, but every app lives inside a project.
-
-</details>
-
-Visit http://127.0.0.1:8000/ in your browser to see your Django site.
-
-When you're done working on your project, you can deactivate the pipenv shell by typing:
-
+### Using createdb
 ```bash
-exit
+createdb catcollector_db
 ```
 
+This creates a new database named catcollector_db. You don’t need to open the psql shell first — it runs directly from your terminal.
+
+### Using pgAdmin
+
+- Open pgAdmin and connect to your PostgreSQL server.
+- Right-click on Databases → Create → Database.
+- Enter the database name (e.g., catcollector_db) and select an owner (user).
+- Click Save.
+
+---
 ### Notes & Tips
 
 - Always use Pipenv for managing packages and environments.
