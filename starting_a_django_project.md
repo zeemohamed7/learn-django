@@ -27,11 +27,7 @@ psycopg2 is a library that allows Python applications to interface with PostgreS
 
 ### Install pgAdmin (Optional GUI)
 
-pgAdmin is a graphical interface for managing PostgreSQL databases.
-
-You can create databases, users, and run SQL queries without using the command line.
-
-It’s similar to MongoDB Compass, which is the GUI for MongoDB.
+*pgAdmin* is a graphical interface for managing PostgreSQL databases, similar to MongoDB Compass, which is the GUI for MongoDB.
 
 Key difference: PostgreSQL is relational (tables, rows, foreign keys), while MongoDB is NoSQL (documents, collections, JSON-like structure).
 
