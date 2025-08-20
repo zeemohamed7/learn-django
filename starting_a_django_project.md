@@ -130,6 +130,8 @@ exit
 This should be your structure so far:
 <img width="152" height="339" alt="image" src="https://github.com/user-attachments/assets/68d58c62-047f-43f0-982b-308468f2bc72" />
 
-Explanation on what each file does can be found [here](https://docs.djangoproject.com/en/4.0/intro/tutorial01/#highlight-default)
-<a href="myotherpage.html#myanchor"></a>
-highlight-default notranslate
+Let's take a look at `catcollector` project folder first.
+
+---
+
+<pre> ```plaintext project_name/ ├── manage.py ├── project_name/ │ ├── __init__.py │ ├── asgi.py │ ├── settings.py │ ├── urls.py │ └── wsgi.py ``` </pre>
