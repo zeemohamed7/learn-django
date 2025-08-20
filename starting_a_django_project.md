@@ -87,6 +87,49 @@ This creates a new database named catcollector_db. You don’t need to open the 
 
 - Templates: define how the data is presented to the user. They are HTML files with placeholders for dynamic content. Templates handle the “view” part in the front end, formatting data provided by views. **Just like Views in MVC!**
 
+
+
 <img width="1233" height="638" alt="image" src="https://github.com/user-attachments/assets/7898c0d2-fe6b-4301-8070-b0aff8d55595" />
 
 ## Starting Your Project
+
+Start a new Django project
+```bash
+django-admin startproject project_name 
+cd project_name
+```
+
+Start a new app
+```bash
+python manage.py startapp main_app
+```
+
+Run the development server
+```bash
+python manage.py runserver
+```
+
+<details><summary>Project 🏠 vs. App 🛋️</summary>
+
+Project = the overall Django website (settings, URLs, config). It's the whole house 🏠 (with wiring, foundation, and rooms).
+
+App = a modular feature inside the project. each room 🛋️ (kitchen, bedroom, bathroom). Each has a purpose but they all belong to the house.
+
+A project can contain many apps, but every app lives inside a project.
+
+</details>
+
+Visit http://127.0.0.1:8000/ in your browser to see your Django site.
+
+When you're done working on your project, you can deactivate the pipenv shell by typing:
+
+```bash
+exit
+```
+
+This should be your structure so far:
+<img width="152" height="339" alt="image" src="https://github.com/user-attachments/assets/68d58c62-047f-43f0-982b-308468f2bc72" />
+
+Explanation on what each file does can be found [here](https://docs.djangoproject.com/en/4.0/intro/tutorial01/#highlight-default)
+<a href="myotherpage.html#myanchor"></a>
+highlight-default notranslate
