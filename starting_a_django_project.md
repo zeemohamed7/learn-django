@@ -26,13 +26,15 @@ pip3 install psycopg2-binary
 psycopg2 is a library that allows Python applications to interface with PostgreSQL.
 
 ---
-
+ 
 ### Install pgAdmin (Optional GUI)
 
 *pgAdmin* is a graphical interface for managing PostgreSQL databases, similar to MongoDB Compass, which is the GUI for MongoDB.
 
 Key difference: PostgreSQL is relational (tables, rows, foreign keys), while MongoDB is NoSQL (documents, collections, JSON-like structure).
 
+---
+ 
 ### Install psycopg2
 To use PostgreSQL, we need to do a one-time install of the psycopg2 Python package:
 ```bash
@@ -40,6 +42,8 @@ pipenv install psycopg2-binary
 ```
 psycopg2 is a popular library that enables Python applications to interface with PostgreSQL.
 
+---
+ 
 ### Create a Database for the Project
 
 Unlike MongoDB, which automatically creates a database the first time you use it, SQL databases require you to create the database manually before using it in a Django project. You can either use psql shell, createdb, or pgAdmin.
@@ -74,7 +78,7 @@ This creates a new database named catcollector_db. You don’t need to open the 
 - Enter the database name (e.g., catcollector_db) and select an owner (user).
 - Click Save.
 
----
+
 ## Models, Routes and Controllers
 
 - Models: define the structure and behavior of the data in your Django application. **Just like the Models in MVC!**
@@ -84,5 +88,5 @@ This creates a new database named catcollector_db. You don’t need to open the 
 - Templates: define how the data is presented to the user. They are HTML files with placeholders for dynamic content. Templates handle the “view” part in the front end, formatting data provided by views. **Just like Views in MVC!**
 
 <img width="1233" height="638" alt="image" src="https://github.com/user-attachments/assets/7898c0d2-fe6b-4301-8070-b0aff8d55595" />
----
+
 ## Starting Your Project
