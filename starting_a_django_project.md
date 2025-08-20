@@ -94,7 +94,7 @@ This creates a new database named catcollector_db. You don’t need to open the 
 
 ## Starting Your Project
 
-Start a new Django project
+### Start a new Django project
 ```bash
 django-admin startproject project_name 
 cd project_name
@@ -115,7 +115,7 @@ A project can contain many apps, but every app lives inside a project.
 
 </details>
 
-Visit http://127.0.0.1:8000/ in your browser to see your Django site.
+Visit `http://127.0.0.1:8000/` in your browser to see your Django site.
 
 When you're done working on your project, you can deactivate the pipenv shell by typing:
 
@@ -151,7 +151,8 @@ catcollector/
 Most important ones right now will be manage.py, settings.py and urls.py
 
 ---
-Start a new app
+
+### Start a new app
 ```bash
 python manage.py startapp main_app
 ```
@@ -177,5 +178,8 @@ main_app/
 - `tests.py` → automated tests
 
 🚨 Create a `urls.py` file inside of `main_app` 🚨
+
+
+### Set up database
 
 Most important ones right now will be models.py, views.py and urls.py
