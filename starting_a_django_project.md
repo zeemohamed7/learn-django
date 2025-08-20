@@ -6,7 +6,7 @@ Learn how to create a full-stack Django app using Django Template Language (DTL)
 1. Setting up PostgreSQL (and pgAdmin4)
 2. Models, Views, and Templates
 3. Understanding the Structure of a Django App
-
+--- 
 ## Setting up PostgreSQL
 It is a powerful, open-source relational database system. We'll use it as the backend database for our Django project.
 
@@ -68,3 +68,15 @@ This creates a new database named catcollector_db. You don’t need to open the 
 - Right-click on Databases → Create → Database.
 - Enter the database name (e.g., catcollector_db) and select an owner (user).
 - Click Save.
+
+---
+## Models, Routes and Controllers
+
+- Models: define the structure and behavior of the data in your Django application. **Just like the Models in MVC!**
+
+Views: handle the logic for a specific request. They process incoming requests, retrieve or modify data via models, and decide what data to send to the user. **Just like the Controllers in MVC!**
+
+- Templates: define how the data is presented to the user. They are HTML files with placeholders for dynamic content. Templates handle the “view” part in the front end, formatting data provided by views. **Just like Views in MVC!**
+
+- <img width="1233" height="638" alt="image" src="https://github.com/user-attachments/assets/7898c0d2-fe6b-4301-8070-b0aff8d55595" />
+
