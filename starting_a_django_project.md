@@ -1,11 +1,12 @@
-Starting a Django Project
+# Starting a Django Project
 
 Learn how to create a full-stack Django app using Django Template Language (DTL) and PostgreSQL as your database.
 
 ## Table of Contents
 1. Setting up PostgreSQL (and pgAdmin4)
 2. Models, Views, and Templates
-3. Understanding the Structure of a Django App
+3. Starting Your Project
+4. 
 --- 
 ## Setting up PostgreSQL
 It is a powerful, open-source relational database system. We'll use it as the backend database for our Django project.
@@ -85,4 +86,5 @@ This creates a new database named catcollector_db. You don’t need to open the 
 - Templates: define how the data is presented to the user. They are HTML files with placeholders for dynamic content. Templates handle the “view” part in the front end, formatting data provided by views. **Just like Views in MVC!**
 
 <img width="1233" height="638" alt="image" src="https://github.com/user-attachments/assets/7898c0d2-fe6b-4301-8070-b0aff8d55595" />
-
+---
+## Starting Your Project
