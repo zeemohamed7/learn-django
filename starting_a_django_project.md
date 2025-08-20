@@ -123,7 +123,9 @@ exit
 ```
 
 This should be your structure so far:
+<br>
 <img width="152" height="339" alt="image" src="https://github.com/user-attachments/assets/68d58c62-047f-43f0-982b-308468f2bc72" />
+<br>
 
 Let's take a look at `catcollector` project folder first.
 
