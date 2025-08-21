@@ -279,7 +279,7 @@ urlpatterns = [
 - `views.home` → Calls the home view function when / is requested.
 - `name='home'` → Gives the route a name for easy reference in templates or with reverse(). 
 
-<details><summary>Why `name='home'?`</summary>
+<details><summary>Why name='home'❓</summary>
 In a Django template, instead of hardcoding a URL like this:
  
 ```html
