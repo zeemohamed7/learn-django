@@ -175,6 +175,9 @@ main_app/
 
 Most important ones right now will be models.py, views.py and urls.py
 
+Include your app in your catcollector project by adding it to **INSTALLED_APPS** in `settings.py`:
+<img width="287" height="203" alt="image" src="https://github.com/user-attachments/assets/1afb907e-f93f-4348-bd70-609673a519c7" />
+
 
 ## Connecting to Database
 Earlier we created a dedicated catcollector PostgreSQL database.
@@ -193,5 +196,3 @@ A Django project's configuration lives in `settings.py`. To set up our database,
 <br>
 
 🚨 Don't follow blindly! Actually input the proper details. 🚨
-
-
