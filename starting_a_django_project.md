@@ -299,15 +299,22 @@ If the route ever changes (say, from / to /dashboard), you only need to update i
 
 </details>
 
-#### 3. Write the view function
-Finally, in main_app/views.py, create a simple view to handle requests to /:
+## Views in Django
+
+Views in Django is the equivalent of Controllers in Express. 
+In our home URL setup, we referenced a view called home. Let’s define it in main_app/views.py:
 
 ```py
-from django.http import HttpResponse
+from django.shortcuts import render
+from django.http import HttpResponse  # needed to send responses
 
 def home(request):
-    return HttpResponse("<h1>Welcome to Cat Collector!</h1>")
+    return HttpResponse('<h1>Welcome to Cat Collector!</h1>')
 ```
+
+Here’s what’s happening:
+- Every view function takes a request parameter, similar to the req object in Express.
+- HttpResponse is the simplest way to return something to the browser, much like res.send() in Express.
 
 ### Django vs. Express: A Quick Snapshot
 | Feature | **Django** | **Express** |
