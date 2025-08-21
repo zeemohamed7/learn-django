@@ -299,6 +299,15 @@ If the route ever changes (say, from / to /dashboard), you only need to update i
 
 </details>
 
+### URL Routing in Django vs. Express: A Quick Snapshot
+| Feature | **Django** | **Express** |
+|----------|------------|-------------|
+| **Route storage** | Defined in `urls.py` for each app, plus a main project-level `urls.py`. | Typically in `app.js` or separate files inside a `routes/` folder. |
+| **URL matching** | Matches **only the path**; the HTTP method is handled in the view logic. | Matches **path and HTTP method** directly (e.g., `app.get`, `app.post`). |
+| **Handling methods** | Use conditional checks in the view (e.g., `if request.method == "POST":`). | Handled by method-specific functions like `app.get()` or `app.post()`. |
+| **Dynamic URLs** | Uses converters like `<int:id>` or regex with `re_path()`. | Uses route parameters like `/:id` with optional regex patterns. |
+| **Link generation** | Built-in helpers like `reverse()` in Python or `{% url 'name' %}` in templates. | Typically manual string building or third-party helper libraries. |
+
 ## Views in Django
 
 Views in Django is the equivalent of Controllers in Express. 
@@ -317,11 +326,6 @@ Here’s what’s happening:
 - Every view function takes a `request` parameter, similar to the req object in Express.
 - HttpResponse is the simplest way to return something to the browser, much like res.send() in Express.
 
-### Django vs. Express: A Quick Snapshot
-| Feature | **Django** | **Express** |
-|----------|------------|-------------|
-| **Route storage** | Defined in `urls.py` for each app, plus a main project-level `urls.py`. | Typically in `app.js` or separate files inside a `routes/` folder. |
-| **URL matching** | Matches **only the path**; the HTTP method is handled in the view logic. | Matches **path and HTTP method** directly (e.g., `app.get`, `app.post`). |
-| **Handling methods** | Use conditional checks in the view (e.g., `if request.method == "POST":`). | Handled by method-specific functions like `app.get()` or `app.post()`. |
-| **Dynamic URLs** | Uses converters like `<int:id>` or regex with `re_path()`. | Uses route parameters like `/:id` with optional regex patterns. |
-| **Link generation** | Built-in helpers like `reverse()` in Python or `{% url 'name' %}` in templates. | Typically manual string building or third-party helper libraries. |
+## Templates in Django
+Templates in Django is the equivalent of Views in Express. 
+
