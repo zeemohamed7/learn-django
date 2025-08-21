@@ -7,6 +7,9 @@ Learn how to create a full-stack Django app using Django Template Language (DTL)
 2. Models, Views, and Templates
 3. Starting Your Project
 4. Connecting to DB
+5. URLs (Routing)
+6. Views
+7. Templates
 
 
 ## Setting up PostgreSQL
@@ -171,7 +174,6 @@ main_app/
 - `migrations/` → DB history changes
 - `tests.py` → automated tests
 
-🚨 Create a `urls.py` file inside of `main_app` 🚨
 
 Most important ones right now will be models.py, views.py and urls.py
 
@@ -183,16 +185,15 @@ Include your app in your catcollector project by adding it to **INSTALLED_APPS**
 Earlier we created a dedicated catcollector PostgreSQL database.
 
 A Django project's configuration lives in `settings.py`. To set up our database, scroll down to:
-<br>
 
+<br>
 <img width="379" height="111" alt="image" src="https://github.com/user-attachments/assets/4aa36748-f4e4-49ff-8739-ceae06db7420" />
+<br>
 
 Change it to:
-
-<br>
 🚨 Don't follow blindly! Actually input the proper details. 🚨
-<br>
 
+<br>
 <img width="605" height="182" alt="image" src="https://github.com/user-attachments/assets/5623d7a9-9b6f-42e9-83aa-cb745dfc9a5e" />
 <br>
 
@@ -200,13 +201,92 @@ Change it to:
 
 
 If you run the server, you'll see an error about unapplied migration message:
+
 <br>
 <img width="958" height="113" alt="image" src="https://github.com/user-attachments/assets/37d5dd7d-a1c8-41d9-8ea2-73455827a022" />
 <br>
+
 To get rid of it, let's apply our migrations with
+
 ```bash
 python3 manage.py migrate
 ```
 
+## URL Routing in Django
 
+In Express, every incoming request needs a matching route, and that route determines which function runs in response. Django works similarly, but with a slightly different approach:
 
+- Routes in Django match only the URL path — the HTTP method (GET, POST, etc.) is not part of the matching process. You’ll handle the request method inside the view function instead.
+- All routes are defined in URL configuration files (called urls.py), which act as a roadmap for directing requests to the right views.
+
+### Setting Up the Home Page
+
+Let’s wire up the root URL so that visiting:
+```bash
+http://localhost:8000
+```
+
+loads the home page of the app.
+<br>
+<img width="1186" height="713" alt="image" src="https://github.com/user-attachments/assets/8a4e4039-c162-4919-8ff5-09af4bd74db5" />
+<br>
+
+#### 1. Prepare the URL configuration
+
+Every Django project includes a central URL configuration — in our case, that’s:
+```bash
+catcollector/
+  urls.py
+```
+
+While you could dump all your routes there, the recommended practice is to keep each app’s routes organized in its own urls.py file, then “plug in” that file to the main project-level configuration.
+
+---
+##### Create a urls.py for the app
+Run this command inside the main_app directory:
+```bash
+touch main_app/urls.py
+```
+This creates a blank URL configuration file specifically for the main_app.
+
+---
+##### Include the app routes in the project-level file
+Open the project’s catcollector/urls.py and update it like this:
+```py
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('main_app.urls')),  # Send root requests to main_app
+]
+```
+Now, any request to / will look for matching patterns in main_app/urls.py.
+
+#### 2. Define the route
+Inside main_app/urls.py, add this:
+```py
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home, name='home'),
+]
+```
+#### 3. Write the view function
+Finally, in main_app/views.py, create a simple view to handle requests to /:
+```py
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("<h1>Welcome to Cat Collector!</h1>")
+```
+
+### Django vs. Express: A Quick Snapshot
+| Feature | **Django** | **Express** |
+|----------|------------|-------------|
+| **Route storage** | Defined in `urls.py` for each app, plus a main project-level `urls.py`. | Typically in `app.js` or separate files inside a `routes/` folder. |
+| **URL matching** | Matches **only the path**; the HTTP method is handled in the view logic. | Matches **path and HTTP method** directly (e.g., `app.get`, `app.post`). |
+| **Handling methods** | Use conditional checks in the view (e.g., `if request.method == "POST":`). | Handled by method-specific functions like `app.get()` or `app.post()`. |
+| **Dynamic URLs** | Uses converters like `<int:id>` or regex with `re_path()`. | Uses route parameters like `/:id` with optional regex patterns. |
+| **Link generation** | Built-in helpers like `reverse()` in Python or `{% url 'name' %}` in templates. | Typically manual string building or third-party helper libraries. |
