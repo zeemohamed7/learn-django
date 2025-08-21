@@ -20,12 +20,6 @@ brew services start postgresql
 ```
 Windows: Download the installer from [postgresql.org](https://www.postgresql.org/download/windows/) and follow the instructions.
 
-To use PostgreSQL, we need to do a **one-time install** of the psycopg2 Python package:
-```bash
-pip3 install psycopg2-binary
-```
-psycopg2 is a library that allows Python applications to interface with PostgreSQL.
-
 ---
  
 ### Install pgAdmin (Optional GUI)
