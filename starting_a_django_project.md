@@ -252,6 +252,8 @@ This creates a blank URL configuration file specifically for the main_app.
 ---
 ##### Include the app routes in the project-level file
 Open the project’s catcollector/urls.py and update it like this:
+- import include
+- add path to main_app
 ```py
 from django.contrib import admin
 from django.urls import path, include
@@ -265,6 +267,8 @@ Now, any request to / will look for matching patterns in main_app/urls.py.
 
 #### 2. Define the route
 Inside main_app/urls.py, add this:
+- import views
+  add path for home view
 ```py
 from django.urls import path
 from . import views
