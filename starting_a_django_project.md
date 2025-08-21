@@ -189,6 +189,7 @@ A Django project's configuration lives in `settings.py`. To set up our database,
 
 Change it to:
 
+<br>
 🚨 Don't follow blindly! Actually input the proper details. 🚨
 <br>
 
@@ -198,9 +199,10 @@ Change it to:
 > Django defaults to SQLite, which isn’t suited for production. Update your project settings to use PostgreSQL instead.
 
 
-If you run the server, you'll see an error about unapplied migration message
+If you run the server, you'll see an error about unapplied migration message:
+<br>
 <img width="958" height="113" alt="image" src="https://github.com/user-attachments/assets/37d5dd7d-a1c8-41d9-8ea2-73455827a022" />
-
+<br>
 To get rid of it, let's apply our migrations with
 ```bash
 python3 manage.py migrate
