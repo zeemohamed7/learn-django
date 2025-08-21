@@ -294,8 +294,10 @@ You can use:
 If the route ever changes (say, from / to /dashboard), you only need to update it in urls.py, and every reference will still work — that’s the main benefit of naming routes.
 
 </details>
+
 #### 3. Write the view function
 Finally, in main_app/views.py, create a simple view to handle requests to /:
+
 ```py
 from django.http import HttpResponse
 
