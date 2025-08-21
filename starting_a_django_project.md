@@ -303,7 +303,8 @@ If the route ever changes (say, from / to /dashboard), you only need to update i
 
 Views in Django is the equivalent of Controllers in Express. 
 In our home URL setup, we referenced a view called home. Let’s define it in main_app/views.py:
-
+- Import HttpResponse
+- Create home function
 ```py
 from django.shortcuts import render
 from django.http import HttpResponse  # needed to send responses
@@ -313,7 +314,7 @@ def home(request):
 ```
 
 Here’s what’s happening:
-- Every view function takes a request parameter, similar to the req object in Express.
+- Every view function takes a `request` parameter, similar to the req object in Express.
 - HttpResponse is the simplest way to return something to the browser, much like res.send() in Express.
 
 ### Django vs. Express: A Quick Snapshot
