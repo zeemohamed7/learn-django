@@ -273,6 +273,27 @@ urlpatterns = [
     path('', views.home, name='home'),
 ]
 ```
+
+- `urlpatterns` → List of URL routes for the app.
+- `path('')` → Matches the root URL (/).
+- `views.home` → Calls the home view function when / is requested.
+- `name='home'` → Gives the route a name for easy reference in templates or with reverse(). 
+
+<details><summary>Why `name='home'?`</summary>
+In a Django template, instead of hardcoding a URL like this:
+ 
+```html
+<a href="/">Home</a>
+```
+
+You can use:
+```html
+<a href="{% url 'home' %}">Home</a>
+```
+
+If the route ever changes (say, from / to /dashboard), you only need to update it in urls.py, and every reference will still work — that’s the main benefit of naming routes.
+
+</details>
 #### 3. Write the view function
 Finally, in main_app/views.py, create a simple view to handle requests to /:
 ```py
