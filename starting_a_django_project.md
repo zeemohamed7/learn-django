@@ -91,7 +91,19 @@ This creates a new database named catcollector_db. You don’t need to open the 
 
 ## Starting Your Project
 
-### Start a new Django project
+Install Django and create a virtual environment
+```bash
+pipenv install django
+```
+
+
+Activate the virtual environment
+```bash
+pipenv shell
+```
+
+Now you’re ready to run Django commands inside your project!
+
 ```bash
 django-admin startproject project_name 
 cd project_name
