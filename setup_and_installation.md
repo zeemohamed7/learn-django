@@ -136,11 +136,11 @@ It’s similar to MongoDB Compass, which is the GUI for MongoDB.
 Key difference: PostgreSQL is relational (tables, rows, foreign keys), while MongoDB is NoSQL (documents, collections, JSON-like structure).
 
 ### Install psycopg2
-To use PostgreSQL, we need to do a one-time install of the **psycopg2** Python package:
+To use PostgreSQL, we need install of the **psycopg2** Python package:
 ```bash
 pipenv install psycopg2-binary
 ```
-**psycopg2** is a popular library that enables Python applications to interface with PostgreSQL.
+**psycopg2-binary** is a popular library that enables Python applications to interface with PostgreSQL.
 
 ### Create a Database for the Project
 
