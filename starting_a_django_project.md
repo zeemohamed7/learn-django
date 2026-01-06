@@ -3,78 +3,13 @@
 Learn how to create a full-stack Django app using Django Template Language (DTL) and PostgreSQL as your database.
 
 ## Table of Contents
-1. Setting up PostgreSQL (and pgAdmin4)
-2. Models, Views, and Templates
-3. Starting Your Project
-4. Connecting to DB
-5. URLs (Routing)
-6. Views
-7. Templates
+1. Models, Views, and Templates
+2. Starting Your Project
+3. Connecting to DB
+4. URLs (Routing)
+5. Views
+6. Templates
 
-
-## Setting up PostgreSQL
-It is a powerful, open-source relational database system. We'll use it as the backend database for our Django project.
-
-### Install PostgreSQL
-- macOS (with Homebrew):
-```bash
-brew install postgresql
-brew services start postgresql
-```
-Windows: Download the installer from [postgresql.org](https://www.postgresql.org/download/windows/) and follow the instructions.
-
----
- 
-### Install pgAdmin (Optional GUI)
-
-*pgAdmin* is a graphical interface for managing PostgreSQL databases, similar to MongoDB Compass, which is the GUI for MongoDB.
-
-Key difference: PostgreSQL is relational (tables, rows, foreign keys), while MongoDB is NoSQL (documents, collections, JSON-like structure).
-
----
- 
-### Install psycopg2
-To use PostgreSQL, we need to do a one-time install of the psycopg2 Python package:
-```bash
-pipenv install psycopg2-binary
-```
-psycopg2 is a popular library that enables Python applications to interface with PostgreSQL.
-
----
- 
-### Create a Database for the Project
-
-Unlike MongoDB, which automatically creates a database the first time you use it, SQL databases require you to create the database manually before using it in a Django project. You can either use psql shell, createdb, or pgAdmin.
-
-#### Using the psql Command Line
-Open the PostgreSQL shell:
-```bash
-psql
-```
-
-Create a new database for your project:
-```bash
-CREATE DATABASE catcollector_db;
-```
-
-Exit using
-```bash
-\q
-```
-
-### Using createdb
-```bash
-createdb catcollector_db
-```
-
-This creates a new database named catcollector_db. You don’t need to open the psql shell first — it runs directly from your terminal.
-
-### Using pgAdmin
-
-- Open pgAdmin and connect to your PostgreSQL server.
-- Right-click on Databases → Create → Database.
-- Enter the database name (e.g., catcollector_db) and select an owner (user).
-- Click Save.
 
 
 ## Models, Routes and Controllers
@@ -91,9 +26,10 @@ This creates a new database named catcollector_db. You don’t need to open the 
 
 ## Starting Your Project
 
-Install Django and create a virtual environment
+Install Django, psycopg2-binary and create a virtual environment
 ```bash
 pipenv install django
+pipenv install psycopg2-binary
 ```
 
 
